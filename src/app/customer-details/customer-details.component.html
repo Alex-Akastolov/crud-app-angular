@@ -1,0 +1,23 @@
+<h2>Добавить покупателя</h2>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div class="mb-3">
+    <label class="form-label" for="name">Имя Фамилия</label>
+    <input class="form-control" formControlName="name" id="name" placeholder="Имя Фамилия" type="text">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="email">Email</label>
+    <input class="form-control" formControlName="email" id="email" placeholder="Email" type="text">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="mobile">Телефон</label>
+    <input class="form-control" formControlName="mobile" id="mobile" placeholder="Телефон" type="text">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="location">Город</label>
+    <input class="form-control" formControlName="location" id="location" placeholder="Город" type="text">
+  </div>
+  <div class="mb-3">
+    <button [disabled]="form.invalid" class="btn btn-info">Сохранить</button>
+  </div>
+</form>
